@@ -1,0 +1,22 @@
+
+server:
+  port: 1010
+
+spring:
+  application:
+    name: cloud-provider
+  cloud:
+    nacos:
+      discovery:
+        metadata:
+          gray: false
+        server-addr: localhost:8848
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - service-registry
